@@ -1,0 +1,84 @@
+:root {
+  --darker: #141414;
+  --dark: #1F1F1F;
+  --lighter: #F5F5F5;
+  --light: #EBEBEB;
+  --bug-bg: #88B950;
+  --bug-tag: linear-gradient(180deg, #729F3F 0%, #5E8334 100%);
+  --dark-bg: #858585;
+  --dark-tag: linear-gradient(180deg, #707070 0%, #5C5C5C 100%);
+  --dragon-bg: #B7A4AB;
+  --dragon-tag: linear-gradient(180deg, #A28993 0%, #937682 100%);
+  --eletric-bg: #F2E069;
+  --eletric-tag: linear-gradient(180deg, #EED535 0%, #E1C614 100%);
+  --fairy-bg: #FDD8F3;
+  --fairy-tag: linear-gradient(180deg, #FDB9E9 0%, #FC9CDF 100%);
+  --fighting-bg: #E59461;
+  --fighting-tag: linear-gradient(180deg, #D56723 0%, #C15D1F 100%);
+  --fire-bg: #FDA05D;
+  --fire-tag: linear-gradient(180deg, #FD7D24 0%, #F26602 100%);
+  --flying-bg: #A3D2E0;
+  --flying-tag: linear-gradient(180deg, #7DC0D4 0%, #66B4CC 100%);
+  --ghost-bg: #937EB4;
+  --ghost-tag: linear-gradient(180deg, #7B62A3 0%, #69538D 100%);
+  --grass-bg: #ADD671;
+  --grass-tag: linear-gradient(180deg, #9BCC50 0%, #88BE37 100%);
+  --ground-bg: #DBCA6B;
+  --ground-tag: linear-gradient(180deg, #D1BB40 0%, #C5AF30 100%);
+  --ice-bg: #81D5EE;
+  --ice-tag: linear-gradient(180deg, #51C4E7 0%, #3ABCE4 100%);
+  --normal-bg: #BEC4C5;
+  --normal-tag: linear-gradient(180deg, #A4ACAF 0%, #939C9F 100%);
+  --poison-bg: #C89AD5;
+  --poison-tag: linear-gradient(180deg, #B97FC9 0%, #A961BD 100%);
+  --psychic-bg: #F68ECA;
+  --psychic-tag: linear-gradient(180deg, #F366B9 0%, #F042A7 100%);
+  --rock-bg: #CBAE2A;
+  --rock-tag: linear-gradient(180deg, #A38C21 0%, #87741C 100%);
+  --steel-bg: #B9CACB;
+  --steel-tag: linear-gradient(180deg, #9EB7B8 0%, #8AA7A8 100%);
+  --water-bg: #64A4CE;
+  --water-tag: linear-gradient(180deg, #4592C4 0%, #367CAB 100%);
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.50%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--darker);
+  background-color: var(--lighter);
+}
+
+body, input, textarea, select, button {
+  font: 400 1rem "Glory", sans-serif;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
