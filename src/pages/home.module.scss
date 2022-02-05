@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.bug {
+  color: var(--lighter);
+  background: var(--bug-tag);
+}
+
+.dark {
+  color: var(--lighter);
+  background: var(--dark-tag);
+}
+
+.dragon {
+  color: var(--lighter);
+  background: var(--dragon-tag);
+}
+
+.eletric {
+  color: var(--darker);
+  background: var(--eletric-tag);
+}
+
+.fairy {
+  color: var(--darker);
+  background: var(--fairy-tag);
+}
+
+.fighting {
+  color: var(--lighter);
+  background: var(--fighting-tag);
+}
+
+.fire {
+  color: var(--lighter);
+  background: var(--fire-tag);
+}
+
+.flying {
+  color: var(--darker);
+  background: var(--flying-tag);
+}
+
+.ghost {
+  color: var(--lighter);
+  background: var(--ghost-tag);
+}
+
+.grass {
+  color: var(--darker);
+  background: var(--grass-tag);
+}
+
+.ground {
+  color: var(--darker);
+  background: var(--ground-tag);
+}
+
+.ice {
+  color: var(--darker);
+  background: var(--ice-tag);
+}
+
+.normal {
+  color: var(--darker);
+  background: var(--normal-tag);
+}
+
+.poison {
+  color: var(--lighter);
+  background: var(--poison-tag);
+}
+
+.psychic {
+  color: var(--lighter);
+  background: var(--psychic-tag);
+}
+
+.rock {
+  color: var(--lighter);
+  background: var(--rock-tag);
+}
+
+.steel {
+  color: var(--darker);
+  background: var(--steel-tag);
+}
+
+.water {
+  color: var(--lighter);
+  background: var(--water-tag);
+}

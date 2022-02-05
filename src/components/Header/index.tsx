@@ -1,7 +1,9 @@
+import styles from './styles.module.scss'
+
 export function Header() {
   return (
-    <header>
-      <img src="" alt="Logo" />
+    <header className={ styles.container }>
+      <img src="/logo.svg" alt="Pokemon" />
     </header>
   )
 }
