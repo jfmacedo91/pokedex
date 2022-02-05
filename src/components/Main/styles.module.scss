@@ -11,6 +11,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: 100%;
+    max-height: 28rem;
   }
 
   button {
@@ -30,6 +32,7 @@
   nav {
     display: flex;
     gap: 1rem;
+    z-index: 2;
   }
 }
 
@@ -37,11 +40,13 @@
   font-family: 'Inconsolata';
   font-size: 3rem;
   font-weight: 600;
+  z-index: 2;
 }
 
 .name {
   font-size: 18rem;
   font-weight: 800;
+  text-align: center;
   text-transform: capitalize;
 }
 
@@ -75,13 +80,13 @@
   }
 }
 
-.eletric {
+.electric {
   strong {
-    color: var(--eletric-bg);
+    color: var(--electric-bg);
   }
 
   button {
-    background: var(--eletric-bg);
+    background: var(--electric-bg);
   }
 }
 

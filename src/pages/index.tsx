@@ -5,11 +5,14 @@ import { Main } from '../components/Main'
 
 import styles from './home.module.scss'
 
-export default function Home() {
-  const name = 'scyther'
-  const number = 123
-  const type = 'bug'
-  const image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${ number }.png`
+interface HomeProps {
+  image: string
+  name: string
+  number: number
+  type: string
+}
+
+export default function Home({ image, name, number, type }: HomeProps) {
 
   return (
     <>
@@ -23,4 +26,19 @@ export default function Home() {
       </section>
     </>
   )
+}
+
+export const getStaticProps = async () => {
+  const allPokemon = await fetch('https://pokeapi.co/api/v2/pokedex/1').then((response) => response.json())
+  const pokemonId = Math.ceil(Math.random() * allPokemon.pokemon_entries.length)
+  const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${ pokemonId }`).then((response) => response.json())
+
+  return {
+    props: {
+      image: pokemon.sprites.other['official-artwork'].front_default,
+      name: pokemon.name,
+      number: pokemon.id,
+      type: pokemon.types[0].type.name
+    }
+  }
 }
