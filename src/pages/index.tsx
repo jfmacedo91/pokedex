@@ -1,17 +1,16 @@
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 
 import styles from './home.module.scss'
 
-interface HomeProps {
-  image: string
-  name: string
-  number: number
-  type: string
-}
+export default function Home() {
+  const [image, setImage] = useState('')
+  const [name, setName] = useState('')
+  const [number, setNumber] = useState(0)
+  const [type, setType] = useState('')
 
-export default function Home({ image, name, number, type }: HomeProps) {
   let formatedNumber = ''
   const [formattedName, ] = name.split('-')
 
@@ -22,6 +21,21 @@ export default function Home({ image, name, number, type }: HomeProps) {
   } else (
     formatedNumber = `#${ number }`
   )
+
+  useEffect(() => {
+    async function getPokemon() {
+      const allPokemon = await fetch('https://pokeapi.co/api/v2/pokedex/1').then((response) => response.json())
+      const pokemonId = Math.ceil(Math.random() * allPokemon.pokemon_entries.length)
+      const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${ pokemonId }`).then((response) => response.json())
+
+      setImage(pokemon.sprites.other['official-artwork'].front_default)
+      setName(pokemon.name)
+      setNumber(pokemon.id)
+      setType(pokemon.types[0].type.name)
+    }
+
+    getPokemon()
+  }, [])
 
   return (
     <>
@@ -43,19 +57,4 @@ export default function Home({ image, name, number, type }: HomeProps) {
       </section>
     </>
   )
-}
-
-export const getStaticProps = async () => {
-  const allPokemon = await fetch('https://pokeapi.co/api/v2/pokedex/1').then((response) => response.json())
-  const pokemonId = Math.ceil(Math.random() * allPokemon.pokemon_entries.length)
-  const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${ pokemonId }`).then((response) => response.json())
-
-  return {
-    props: {
-      image: pokemon.sprites.other['official-artwork'].front_default,
-      name: pokemon.name,
-      number: pokemon.id,
-      type: pokemon.types[0].type.name
-    }
-  }
 }
