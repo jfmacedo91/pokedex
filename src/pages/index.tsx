@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
-import { Main } from '../components/Main'
 
 import styles from './home.module.scss'
 
@@ -13,6 +12,16 @@ interface HomeProps {
 }
 
 export default function Home({ image, name, number, type }: HomeProps) {
+  let formatedNumber = ''
+  const [formattedName, ] = name.split('-')
+
+  if(number < 10) {
+    formatedNumber = `#00${ number }`
+  } else if(number < 100) {
+    formatedNumber = `#0${ number }`
+  } else (
+    formatedNumber = `#${ number }`
+  )
 
   return (
     <>
@@ -21,7 +30,15 @@ export default function Home({ image, name, number, type }: HomeProps) {
       </Head>
       <section className={ `${ styles.container } ${ styles[type] }` }>
         <Header />
-        <Main image={ image } name={ name } number={ number } type={ type } />
+        <main className={ `${styles.mainContent}` }>
+          <strong className={ styles.number }>{ formatedNumber }</strong>
+          <strong className={ styles.name }>{ formattedName }</strong>
+          <img src={ image } alt={ `${ formattedName }'s image` } />
+          <nav>
+            <button>More about { formattedName }</button>
+            <button>Pokedex</button>
+          </nav>
+        </main>
         <Footer />
       </section>
     </>

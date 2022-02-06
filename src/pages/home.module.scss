@@ -3,94 +3,328 @@
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.mainContent {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    max-height: 28rem;
+  }
+
+  button {
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: 0;
+    border-radius: 0.4rem;
+    color: inherit;
+    text-transform: capitalize;
+  }
+
+  button:hover {
+    filter: brightness(1.1);
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+    z-index: 2;
+  }
+}
+
+.number {
+  font-family: 'Inconsolata';
+  font-size: 3rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.name {
+  font-size: 18rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .bug {
   color: var(--lighter);
   background: var(--bug-tag);
+
+  main {
+    strong {
+      color: var(--bug-bg);
+    }
+
+    button {
+      background: var(--bug-bg);
+    }
+  }
 }
 
 .dark {
   color: var(--lighter);
   background: var(--dark-tag);
+
+  main {
+    strong {
+      color: var(--dark-bg);
+    }
+  
+    button {
+      background: var(--dark-bg);
+    }
+  }
 }
 
 .dragon {
   color: var(--lighter);
   background: var(--dragon-tag);
+
+  main {
+    strong {
+      color: var(--dragon-bg);
+    }
+  
+    button {
+      background: var(--dragon-bg);
+    }
+  }
 }
 
 .electric {
   color: var(--darker);
   background: var(--electric-tag);
+
+  main {
+    strong {
+      color: var(--electric-bg);
+    }
+
+    button {
+      background: var(--electric-bg);
+    }
+  }
 }
 
 .fairy {
   color: var(--darker);
   background: var(--fairy-tag);
+
+  main {
+    strong {
+      color: var(--fairy-bg);
+    }
+  
+    button {
+      background: var(--fairy-bg);
+    }
+  }
 }
 
 .fighting {
   color: var(--lighter);
   background: var(--fighting-tag);
+
+  main {
+    strong {
+      color: var(--fighting-bg);
+    }
+  
+    button {
+      background: var(--fighting-bg);
+    }
+  }
 }
 
 .fire {
   color: var(--lighter);
   background: var(--fire-tag);
+
+  main {
+    strong {
+      color: var(--fire-bg);
+    }
+  
+    button {
+      background: var(--fire-bg);
+    }
+  }
 }
 
 .flying {
   color: var(--darker);
   background: var(--flying-tag);
+
+  main {
+    strong {
+      color: var(--flying-bg);
+    }
+  
+    button {
+      background: var(--flying-bg);
+    }
+  }
 }
 
 .ghost {
   color: var(--lighter);
   background: var(--ghost-tag);
+
+  main {
+    strong {
+      color: var(--ghost-bg);
+    }
+  
+    button {
+      background: var(--ghost-bg);
+    }
+  }
 }
 
 .grass {
   color: var(--darker);
   background: var(--grass-tag);
+
+  main {
+    strong {
+      color: var(--grass-bg);
+    }
+  
+    button {
+      background: var(--grass-bg);
+    }
+  }
 }
 
 .ground {
   color: var(--darker);
   background: var(--ground-tag);
+
+  main {
+    strong {
+      color: var(--ground-bg);
+    }
+  
+    button {
+      background: var(--ground-bg);
+    }
+  }
 }
 
 .ice {
   color: var(--darker);
   background: var(--ice-tag);
+
+  main {
+    strong {
+      color: var(--ice-bg);
+    }
+  
+    button {
+      background: var(--ice-bg);
+    }
+  }
 }
 
 .normal {
   color: var(--darker);
   background: var(--normal-tag);
+
+  main {
+    strong {
+      color: var(--normal-bg);
+    }
+  
+    button {
+      background: var(--normal-bg);
+    }
+  }
 }
 
 .poison {
   color: var(--lighter);
   background: var(--poison-tag);
+
+  main {
+    strong {
+      color: var(--poison-bg);
+    }
+
+    button {
+      background: var(--poison-bg);
+    }
+  }
 }
 
 .psychic {
   color: var(--lighter);
   background: var(--psychic-tag);
+
+  main {
+    strong {
+      color: var(--psychic-bg);
+    }
+  
+    button {
+      background: var(--psychic-bg);
+    }
+  }
 }
 
 .rock {
   color: var(--lighter);
   background: var(--rock-tag);
+
+  main {
+    strong {
+      color: var(--rock-bg);
+    }
+  
+    button {
+      background: var(--rock-bg);
+    }
+  }
 }
 
 .steel {
   color: var(--darker);
   background: var(--steel-tag);
+
+  main {
+    strong {
+      color: var(--steel-bg);
+    }
+  
+    button {
+      background: var(--steel-bg);
+    }
+  }
 }
 
 .water {
   color: var(--lighter);
   background: var(--water-tag);
+
+  main {
+    strong {
+      color: var(--water-bg);
+    }
+  
+    button {
+      background: var(--water-bg);
+    }
+  }
 }
