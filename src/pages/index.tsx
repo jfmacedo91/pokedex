@@ -12,7 +12,7 @@ export default function Home() {
   const [type, setType] = useState('')
 
   let formatedNumber = ''
-  const [formattedName, ] = name.split('-')
+  const formattedName = name.split('-').join(' ')
 
   if(number < 10) {
     formatedNumber = `#00${ number }`
@@ -42,19 +42,26 @@ export default function Home() {
       <Head>
         <title>Pokedéx | Início</title>
       </Head>
-      <section className={ `${ styles.container } ${ styles[type] }` }>
-        <Header />
-        <main className={ `${styles.mainContent}` }>
-          <strong className={ styles.number }>{ formatedNumber }</strong>
-          <strong className={ styles.name }>{ formattedName }</strong>
-          <img src={ image } alt={ `${ formattedName }'s image` } />
-          <nav>
-            <button>More about { formattedName }</button>
-            <button>Pokedex</button>
-          </nav>
-        </main>
-        <Footer />
-      </section>
+      { name === '' ? (
+        <div className={ styles.loading }>
+          <img src="/loading.gif" alt="Loading" />
+          <strong>Loading...</strong>
+        </div>
+      ) : (
+        <section className={ `${ styles.container } ${ styles[type] }` }>
+          <Header />
+          <main className={ `${styles.mainContent}` }>
+            <strong className={ styles.number }>{ formatedNumber }</strong>
+            <strong className={ styles.name }>{ formattedName }</strong>
+            <img src={ image } alt={ `${ formattedName }'s image` } />
+            <nav>
+              <button>{ formattedName }</button>
+              <button>Pokedex</button>
+            </nav>
+          </main>
+          <Footer />
+        </section>
+      ) }
     </>
   )
 }
